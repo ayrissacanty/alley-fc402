@@ -1,0 +1,6 @@
+# Mommy's Secret Pantry is a self-contained static page (no npm/TypeScript build).
+# This file keeps Netlify from falling back to the repo-root netlify.toml,
+# which builds the separate UNIFY Academy project and needs its node_modules.
+[build]
+  command = "rm -rf dist && mkdir -p dist && cp index.html dist/index.html"
+  publish = "dist"
